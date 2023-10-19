@@ -1,0 +1,129 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    overflow: hidden;
+    padding: 0 20px;
+    background:linear-gradient(#105863 0%, #17a2b8 100%) ;
+}
+.wrapper
+{
+    max-width: 700px;
+    width: 100%;
+    margin: 200px auto;
+    padding: 25px 30px 30px 30px;
+    /* text-shadow: 1px 1px 1px white; */
+    border-radius: 50px;
+    color: #070707;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+.wrapper header
+{
+    font: 20px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+input[type="radio"]
+{
+    display: none;
+}
+.wrapper nav
+{
+    position: relative;
+    width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #105863;
+    border-radius: 5px;
+}
+.wrapper nav label
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    font-size: 17px;
+    color: #fff;
+    /* color: #17a2b8; */
+    border-radius:5px;
+    margin: 0 5px;
+    transition: all 0.4s ease;
+
+}
+.wrapper nav label:hover{
+    background-color: rgba(0,0,0,0.2);
+    color: rgb(187, 175, 175);
+}
+.nav label i
+{
+    padding: 5px;
+}
+nav .slider
+{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    border-radius: 5px;
+    background-color: #051d20;
+    transition: all 0.4s ease;
+}
+#blog:checked ~ nav .slider
+{
+    left: 20%;
+}
+#code:checked ~ nav .slider
+{
+    left: 40%;
+}
+#help:checked ~ nav .slider
+{
+    left: 60%;
+}
+#about:checked ~ nav .slider
+{
+    left: 80%;
+}
+#blog:checked ~ nav label.home,
+#code:checked ~ nav label.code,
+#help:checked ~ nav label.help,
+#about:checked ~ nav label.about
+{
+    color: white;
+}
+/* ------------------------------------------ */
+section .content
+{
+    display: none;
+    /* background-color: white; */
+}
+
+section .content .title
+{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 30px 0 10px 0;
+}
+section .content p
+{
+    text-align: justify;
+}
+#home:checked ~ section .content-1,
+#blog:checked ~ section .content-2,
+#code:checked ~ section .content-3,
+#help:checked ~ section .content-4,
+#about:checked ~ section .content-5
+{
+    display: block;
+}
